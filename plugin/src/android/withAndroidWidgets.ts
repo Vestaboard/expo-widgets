@@ -31,8 +31,8 @@ export const withAndroidWidgets: ConfigPlugin<WithExpoAndroidWidgetsProps> = (
   const sdkVersion = parseInt(config.sdkVersion?.split('.')[0] || '0', 10);
   if (sdkVersion <= 52) {
     config = withWidgetProjectBuildGradle(config);
+    config = withWidgetAppBuildGradle(config);
   }
-  config = withWidgetAppBuildGradle(config);
   config = withGsonGradle(config);
   config = withSourceFiles(config, options);
 
