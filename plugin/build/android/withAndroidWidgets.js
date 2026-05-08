@@ -24,8 +24,8 @@ const withAndroidWidgets = (config, userOptions) => {
     const sdkVersion = parseInt(config.sdkVersion?.split('.')[0] || '0', 10);
     if (sdkVersion <= 52) {
         config = (0, withProjectBuildGradle_1.withWidgetProjectBuildGradle)(config);
+        config = (0, withAppBuildGradle_1.withWidgetAppBuildGradle)(config);
     }
-    config = (0, withAppBuildGradle_1.withWidgetAppBuildGradle)(config);
     config = (0, withAppBuildGradle_1.withGsonGradle)(config);
     config = (0, withSourceFiles_1.withSourceFiles)(config, options);
     return config;

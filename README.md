@@ -4,7 +4,7 @@ An expo module that allows you to make native widgets in iOS and android.
 
 ## Installation
 
-Use v1 packages for expo 49, v2 for expo 51-52, or v3 for expo 53+.
+Use v1 packages for expo 49, v2 for expo 51-52, v3 for expo 53-54, or v4 for expo 55+.
 
 ```
 npx expo install @bittingz/expo-widgets
