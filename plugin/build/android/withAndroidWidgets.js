@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.withAndroidWidgets = void 0;
 const withSourceFiles_1 = require("./withSourceFiles");
-const withModule_1 = require("./withModule");
 const withAppBuildGradle_1 = require("./withAppBuildGradle");
 const withProjectBuildGradle_1 = require("./withProjectBuildGradle");
 const withWidgetManifest_1 = require("./withWidgetManifest");
@@ -19,7 +18,6 @@ function getDefaultedOptions(options) {
 }
 const withAndroidWidgets = (config, userOptions) => {
     const options = getDefaultedOptions(userOptions);
-    config = (0, withModule_1.withModule)(config, options);
     config = (0, withWidgetManifest_1.withWidgetManifest)(config, options);
     const sdkVersion = parseInt(config.sdkVersion?.split('.')[0] || '0', 10);
     if (sdkVersion <= 52) {
